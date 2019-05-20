@@ -26,14 +26,19 @@ HINTS
 
 IPO
 ==========
-INPUTS: 
-PROCESSES: 
-OUTPUTS: 
+INPUTS: user input numbers
+PROCESSES: make numbers a list and add
+OUTPUTS: the sum of the numbers
 
 """
 
 def main():
-    pass # remove this line
-    # your code goes here
+    inNum=input("Enter some numbers with no space or comma between them: ")
+    lNum=inNum.split()
+    for i in lNum:
+        ilnum=int(i)
+
+        sm=sum(ilnum)
+        print(sm)
 
 main()

@@ -14,14 +14,17 @@ each letter with no spaces.
 
 IPO
 ==========
-INPUTS: 
-PROCESSES: 
-OUTPUTS: 
+INPUTS: user input first middle and last names
+PROCESSES: take the first letters of each 
+OUTPUTS: output initals
 
 """
 
 def main():
-    pass # remove this line
-    # your code goes here
-
+    name = input("Enter your first middle and last names: ")
+    initial = str()
+    for word in name.split():
+        initial = initial + word[0]+"."
+    initial = initial.upper()
+    print("The initials are", initial)
 main()

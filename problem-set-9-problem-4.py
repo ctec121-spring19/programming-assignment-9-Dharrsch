@@ -42,14 +42,18 @@ morse_list = [' ', '--..--', '.-.-.-', '-----','.----', '..---', '...--',
                 '-.--', '--..']
 IPO
 ==========
-INPUTS: 
-PROCESSES: 
-OUTPUTS: 
+INPUTS: user inputs word or phrase
+PROCESSES: use dictionary to convert letters to morse code
+OUTPUTS: output message in morse code
 
 """
-
+mcDict = { ' ':' ','A':'.-', 'B':'-...', 'C':'-.-.', 'D':'-..', 'E':'.','F':'..-.', 'G':'--.', 'H':'....','I':'..', 'J':'.---', 'K':'-.-','L':'.-..', 'M':'--', 'N':'-.','O':'---', 'P':'.--.', 'Q':'--.-','R':'.-.', 'S':'...', 'T':'-', 'U':'..-', 'V':'...-', 'W':'.--', 'X':'-..-', 'Y':'-.--', 'Z':'--..', '1':'.----', '2':'..---', '3':'...--', '4':'....-', '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.','0':'-----', ', ':'--..--', '.':'.-.-.-'} 
 def main():
-    pass # remove this line
-    # your code goes here
+    norm=input("Enter a phrase to be translated into Morse Code: ")
+    norm=norm.upper()
+    norm=" ".join(norm)
+    list1=norm.split()
+    for i in list1:
+        print(mcDict[i])
 
 main()

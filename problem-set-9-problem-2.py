@@ -30,14 +30,17 @@ HINTS
 
 IPO
 ==========
-INPUTS: 
-PROCESSES: 
-OUTPUTS: 
+INPUTS: user input phrase to be translated
+PROCESSES: turn phrase to list, translate to pig latin
+OUTPUTS: print pig latin
 
 """
 
 def main():
-    pass # remove this line
     # your code goes here
-
+    Orig=input("Enter a phrase to be converted to pig latin: ")
+    Orig=str(Orig)
+    list1=Orig.split()
+    for i in list1:
+        print(i[1:] + i[0] + "ay", end = " ")
 main()
